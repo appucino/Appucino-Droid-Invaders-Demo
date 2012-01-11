@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.badlogic.androidgames.droidinvaders"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".DroidInvaders"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!-- *** appucino *** -->
+<uses-library android:name="com.google.android.maps" />
+
+<activity android:name="com.appucino.afkag" android:label="AFKAG" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.ChatsActivity" android:label="Chats"  android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation"  />
+<activity android:name="com.appucino.GamesActivity" android:label="Games"  android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.RegisterActivity" android:label="Games"  android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.ProfilesActivity" android:label="Profiles"  android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.LoginActivity" android:label="Login"  android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.LeadersActivity" android:label="Tastes" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.Settings" android:label="Settings" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.RoomList" android:label="RoomList" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.MUCConversationList" android:label="MUCConversationList" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.ScoreCheckinActivity" android:label="Check-in your Score " android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<service android:name="com.appucino.service.AppucinoConnectionService" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation"  />
+<activity android:name="com.appucino.FriendsActivity" android:label="FriendsActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.FriendConversation" android:label="FriendsActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.NeighbourActivity" android:label="NeighbourActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.InboxActivity" android:label="InboxActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.DummyActivity" android:label="DummyActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation" />
+<activity android:name="com.appucino.ChallengeReceiver" android:label="InboxActivity" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation">
+			<intent-filter>
+				<action android:name="com.appucino.intent.action.CHALLENGE_RECEIVER" />
+			</intent-filter></activity>
+
+<!--  *** appucino ***  -->
+<receiver android:name="com.appucino.receivers.C2DMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+          <!-- Receive the actual message -->
+          <intent-filter>
+              <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+              <category android:name="com.badlogic.androidgames.droidinvaders" />
+          </intent-filter>
+          <!-- Receive the registration id -->
+          <intent-filter>
+              <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+              <category android:name="com.badlogic.androidgames.droidinvaders" />
+          </intent-filter>
+      </receiver>
+      
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+
+
+<permission		android:name="com.badlogic.androidgames.droidinvaders.permission.C2D_MESSAGE"
+		android:protectionLevel="signature" />
+	<uses-permission
+		android:name="com.badlogic.androidgames.droidinvaders.permission.C2D_MESSAGE" />
+
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8"/>
+
+</manifest> 
